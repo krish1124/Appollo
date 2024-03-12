@@ -83,7 +83,7 @@ def pay():
  x = eagle.main()
  if x == 1:
    import dsgix1
-   dsgix1.main()
+   #dsgix1.main()
  #confirm()
  return render_template("confirmation.html")
 
@@ -95,10 +95,10 @@ def register():
 @app.route("/confirmation", methods=['GET', 'POST'])
 def confirm():
  form = ConfirmationForm()
- x = eagle.main()
- if x == 1:
-   import dsgix1
-   dsgix1.main()
+ #x = eagle.main()
+ #if x == 1:
+ import dsgix1
+ dsgix1.main()
  return render_template('confirmation.html')
 
 
