@@ -1,0 +1,75 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>Trial Confirmation Form</title> 
+</head> 
+<body> 
+<h1>DSG Trial Confirmation Form </h1> 
+<form method="POST" action="{{ url_for('confirmation') }}"> 
+    {{ form.csrf_token }} 
+    {{ form.username.label }} 
+    {{ form.username }} 
+    <br> 
+    <br> 
+    {{ form.password.label }} 
+    {{ form.password }} 
+    <br> 
+    <br> 
+    {{ form.orgname.label }} 
+    {{ form.orgname }} 
+    <br> 
+    <br>
+    {{ form.submit }} 
+</form> 
+</body> 
+</html> 
+
+{% block content %}
+    <h1>DSG Trial Confirmation Form</h1>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.PUV_PM.label }}<br>
+            {{ form.PUV_PM(size=32) }}
+        </p>
+        <p>
+            {{ form.Username.label }}<br>
+            {{ form.Username(size=20) }}
+        </p>
+        <p>
+            {{ form.Email.label }}<br>
+            {{ form.Email(size=32) }}
+        </p>
+        <p>
+            {{ form.Website.label }}<br>
+            {{ form.Website(size=100) }}
+        </p>
+        <p>
+            {{ form.Acronym.label }}<br>
+            {{ form.Acronym(size=19) }}
+        </p>
+        <p>
+            {{ form.Address_1.label }}<br>
+            {{ form.Address_1(size=89) }}
+        </p>
+        <p>
+            {{ form.Address_2.label }}<br>
+            {{ form.Address_2(size=80) }}
+        </p>
+        <p>
+            {{ form.City.label }}<br>
+            {{ form.City(size=20) }}
+        </p>
+        <p>
+            {{ form.State.label }}<br>
+            {{ form.State(size=20) }}
+        </p>
+        <p>
+            {{ form.Zip.label }}<br>
+            {{ form.Zip(size=10) }}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}
+</body>
+</html>

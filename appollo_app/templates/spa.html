@@ -1,0 +1,25 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>POC Order Form</title> 
+</head> 
+<body> 
+<h1>DSG POC Order Form </h1> 
+<form method="POST" action="{{ url_for('form') }}"> 
+    {{ form.csrf_token }} 
+    {{ form.username.label }} 
+    {{ form.username }} 
+    <br> 
+    <br> 
+    {{ form.password.label }} 
+    {{ form.password }} 
+    <br> 
+    <br> 
+    {{ form.orgname.label }} 
+    {{ form.orgname }} 
+    <br> 
+    <br>
+    {{ form.submit }} 
+</form> 
+</body> 
+</html> 

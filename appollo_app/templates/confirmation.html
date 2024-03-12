@@ -1,0 +1,11 @@
+<!doctype html>
+{% extends "layout.html" %}
+{% block content %}
+<body> 
+    <h5>You are confirmed and setup. Click the button to call DSG Data Extract function</h5> 
+    <form method="POST" action="/confirmation"> 
+        <button type="submit"> DSG Extract</button> 
+    </form> 
+</body> 
+</html>
+{% endblock content %}

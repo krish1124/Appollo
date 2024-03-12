@@ -1,0 +1,3 @@
+az eventhubs eventhub create --name dsgtst887 --namespace-name dsgaz1ehns --resource-group dsgix-narg --blob-container dsgnt2 --capture-interval 300 --cleanup-policy Delete  --partition-count 4 --retention-time 5 --skip-empty-archives true --status Active --storage-account kkml6853009717 --destination-name EventHubArchive.AzureBlockBlob
+
+az eventhubs eventhub create --name dsgtst117 --namespace-name dsgaz2ehns --resource-group dsgix-narg --blob-container dsgnt2 --capture-interval 300 --cleanup-policy Delete --enable-capture true --mi-system-assigned true --partition-count 4 --retention-time 5 --skip-empty-archives true --status Active --storage-account kkml6853009717 --destination-name EventHubArchive.AzureBlockBlob
